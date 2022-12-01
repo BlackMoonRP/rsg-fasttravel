@@ -22,14 +22,14 @@ Config.TravelTime = 30000 -- 10000 = 10 seconds / 30000 = 30 seconds
 -- prompt locations
 Config.FastTravelLocations = {
 
-	{name = 'Fast Travel', location = 'annesburg', 			coords = vector3(2931.614, 1283.1109, 44.65287), 	showblip = true}, --annesburg
-	{name = 'Fast Travel', location = 'armadillo', 			coords = vector3(-3729.09, -2603.55, -12.94), 		showblip = true}, -- armadillo
-	{name = 'Fast Travel', location = 'blackwater', 		coords = vector3(-830.92, -1343.15, 43.67), 		showblip = true}, -- blackwater
-	{name = 'Fast Travel', location = 'rhodes', 			coords = vector3(1231.26, -1299.74, 76.9), 			showblip = true}, -- rhodes
-	{name = 'Fast Travel', location = 'strawberry', 		coords = vector3(-1827.5, -437.65, 159.78), 		showblip = true}, -- strawberry
-	{name = 'Fast Travel', location = 'st-denis', 			coords = vector3(2747.10, -1394.87, 46.18), 		showblip = true}, --st denis
-	{name = 'Fast Travel', location = 'tumbleweed', 		coords = vector3(-5501.2, -2954.32, -1.73), 		showblip = true}, -- tumbleweed
-    {name = 'Fast Travel', location = 'valentine', 			coords = vector3(-174.39, 633.33, 114.09), 			showblip = true}, --valentine
-	{name = 'Fast Travel', location = 'van-horn', 			coords = vector3(2893.37, 624.33, 57.72), 			showblip = true}, -- van horn trading post
-	
+    {name = 'Fast Travel', location = 'annesburg',  coords = vector3(2931.614, 1283.1109, 44.65287), showblip = true, showmarker = true}, --annesburg
+    {name = 'Fast Travel', location = 'armadillo',  coords = vector3(-3729.09, -2603.55, -12.94),    showblip = true, showmarker = true}, -- armadillo
+    {name = 'Fast Travel', location = 'blackwater', coords = vector3(-830.92, -1343.15, 43.67),      showblip = true, showmarker = true}, -- blackwater
+    {name = 'Fast Travel', location = 'rhodes',     coords = vector3(1231.26, -1299.74, 76.9),       showblip = true, showmarker = true}, -- rhodes
+    {name = 'Fast Travel', location = 'strawberry', coords = vector3(-1827.5, -437.65, 159.78),      showblip = true, showmarker = true}, -- strawberry
+    {name = 'Fast Travel', location = 'st-denis',   coords = vector3(2747.10, -1394.87, 46.18),      showblip = true, showmarker = true}, --st denis
+    {name = 'Fast Travel', location = 'tumbleweed', coords = vector3(-5501.2, -2954.32, -1.73),      showblip = true, showmarker = true}, -- tumbleweed
+    {name = 'Fast Travel', location = 'valentine',  coords = vector3(-174.39, 633.33, 114.09),       showblip = true, showmarker = true}, --valentine
+    {name = 'Fast Travel', location = 'van-horn',   coords = vector3(2893.37, 624.33, 57.72),        showblip = true, showmarker = true}, -- van horn trading post
+    
 }
