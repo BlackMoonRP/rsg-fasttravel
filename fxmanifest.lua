@@ -14,6 +14,6 @@ server_script {
 	'server/server.lua',
 }
 
-dependency 'qr-core'
+dependency 'rsg-core'
 
 lua54 'yes'

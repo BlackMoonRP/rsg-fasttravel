@@ -1,10 +1,10 @@
-local QRCore = exports['qr-core']:GetCoreObject()
+local RSGCore = exports['rsg-core']:GetCoreObject()
 local fasttravel
 
 -- prompts
 Citizen.CreateThread(function()
     for fasttravel, v in pairs(Config.FastTravelLocations) do
-        exports['qr-core']:createPrompt(v.location, v.coords, QRCore.Shared.Keybinds['J'], 'Open ' .. v.name, {
+        exports['rsg-core']:createPrompt(v.location, v.coords, RSGCore.Shared.Keybinds['J'], 'Open ' .. v.name, {
             type = 'client',
             event = 'rsg-fasttravel:client:menu',
             args = {},
@@ -34,7 +34,7 @@ end)
 -- menu
 RegisterNetEvent('rsg-fasttravel:client:menu', function()
 
-    exports['qr-menu']:openMenu({
+    exports['rsg-menu']:openMenu({
         {
             header = 'Fast Travel',
             icon = 'fas fa-globe-americas',
@@ -161,7 +161,7 @@ RegisterNetEvent('rsg-fasttravel:client:menu', function()
             header = "❌ | Close Menu",
             txt = '',
             params = {
-                event = 'qr-menu:closeMenu',
+                event = 'rsg-menu:closeMenu',
             }
         },
     })
