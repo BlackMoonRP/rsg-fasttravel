@@ -158,6 +158,19 @@ RegisterNetEvent('rsg-fasttravel:client:menu', function()
             }
         },
         {
+            header = 'FastTravel to Sisika',
+            txt = 'Ticket Price $ '..Config.SisikaPrisonPrice,
+            icon = 'fas fa-map-marked-alt',
+            params = {
+                isServer = true,
+                event = 'rsg-fasttravel:server:buyTicket',
+                args = {
+                    destination = vector3(3266.8964, -715.8876, 42.03495 -1),
+                    price = Config.SisikaPrisonPrice
+                }
+            }
+        },
+        {
             header = "❌ | Close Menu",
             txt = '',
             params = {
