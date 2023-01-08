@@ -11,6 +11,6 @@ AddEventHandler('rsg-fasttravel:server:buyTicket', function(data)
         Player.Functions.RemoveMoney("cash", price, "purchase-fasttravel")
         TriggerClientEvent('rsg-fasttravel:client:doTravel', src, destination)
     else 
-        RSGCore.Functions.Notify(src, 'you don\'t have enough cash on you!', 'error')
+        RSGCore.Functions.Notify(src, Lang:t('error.no_cash'), 'error')
     end
 end)

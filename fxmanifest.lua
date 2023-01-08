@@ -5,13 +5,18 @@ game 'rdr3'
 author 'RexShack#3041'
 description 'rsg-fasttravel'
 
-client_script {
-	'client/client.lua',
-	'config.lua'
+client_scripts {
+    'client/client.lua',
 }
 
-server_script {
-	'server/server.lua',
+server_scripts {
+    'server/server.lua',
+}
+
+shared_scripts {
+    'config.lua',
+    '@rsg-core/shared/locale.lua',
+    'locales/en.lua', -- Change this to your preferred language
 }
 
 dependency 'rsg-core'

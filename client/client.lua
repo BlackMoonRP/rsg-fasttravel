@@ -4,7 +4,7 @@ local fasttravel
 -- prompts
 Citizen.CreateThread(function()
     for fasttravel, v in pairs(Config.FastTravelLocations) do
-        exports['rsg-core']:createPrompt(v.location, v.coords, RSGCore.Shared.Keybinds['J'], 'Open ' .. v.name, {
+        exports['rsg-core']:createPrompt(v.location, v.coords, RSGCore.Shared.Keybinds['J'], Lang:t('menu.open_prompt') .. v.name, {
             type = 'client',
             event = 'rsg-fasttravel:client:menu',
             args = {},
@@ -36,13 +36,13 @@ RegisterNetEvent('rsg-fasttravel:client:menu', function()
 
     exports['rsg-menu']:openMenu({
         {
-            header = 'Fast Travel',
+            header = Lang:t('menu.fast_travel'),
             icon = 'fas fa-globe-americas',
             isMenuHeader = true, -- Set to true to make a nonclickable title
         },
         {
-            header = 'FastTravel to Annesburg',
-            txt = 'Ticket Price $ '..Config.AnnesburgPrice,
+            header = Lang:t('menu.fast_travel_annesburg'),
+            txt = Lang:t('menu.ticket_price')..Config.AnnesburgPrice,
             icon = 'fas fa-map-marked-alt',
             params = {
                 isServer = true,
@@ -54,8 +54,8 @@ RegisterNetEvent('rsg-fasttravel:client:menu', function()
             }
         },
         {
-            header = 'FastTravel to Armadillo',
-            txt = 'Ticket Price $ '..Config.ArmadilloPrice,
+            header = Lang:t('menu.fast_travel_armadillo'),
+            txt = Lang:t('menu.ticket_price')..Config.ArmadilloPrice,
             icon = 'fas fa-map-marked-alt',
             params = {
                 isServer = true,
@@ -67,8 +67,8 @@ RegisterNetEvent('rsg-fasttravel:client:menu', function()
             }
         },
         {
-            header = 'FastTravel to Blackwater',
-            txt = 'Ticket Price $ '..Config.BlackwaterPrice,
+            header = Lang:t('menu.fast_travel_blackwater'),
+            txt = Lang:t('menu.ticket_price')..Config.BlackwaterPrice,
             icon = 'fas fa-map-marked-alt',
             params = {
                 isServer = true,
@@ -80,8 +80,8 @@ RegisterNetEvent('rsg-fasttravel:client:menu', function()
             }
         },
         {
-            header = 'FastTravel to Rhodes',
-            txt = 'Ticket Price $ '..Config.RhodesPrice,
+            header = Lang:t('menu.fast_travel_rhodes'),
+            txt = Lang:t('menu.ticket_price')..Config.RhodesPrice,
             icon = 'fas fa-map-marked-alt',
             params = {
                 isServer = true,
@@ -93,8 +93,8 @@ RegisterNetEvent('rsg-fasttravel:client:menu', function()
             }
         },
         {
-            header = 'FastTravel to Strawberry',
-            txt = 'Ticket Price $ '..Config.StrawberryPrice,
+            header = Lang:t('menu.fast_travel_strawberry'),
+            txt = Lang:t('menu.ticket_price')..Config.StrawberryPrice,
             icon = 'fas fa-map-marked-alt',
             params = {
                 isServer = true,
@@ -106,8 +106,8 @@ RegisterNetEvent('rsg-fasttravel:client:menu', function()
             }
         },
         {
-            header = 'FastTravel to Saint Denis',
-            txt = 'Ticket Price $ '..Config.StDenisPrice,
+            header = Lang:t('menu.fast_travel_saintdenis'),
+            txt = Lang:t('menu.ticket_price')..Config.StDenisPrice,
             icon = 'fas fa-map-marked-alt',
             params = {
                 isServer = true,
@@ -119,8 +119,8 @@ RegisterNetEvent('rsg-fasttravel:client:menu', function()
             }
         },
         {
-            header = 'FastTravel to Tumbleweed',
-            txt = 'Ticket Price $ '..Config.TumbleweedPrice,
+            header = Lang:t('menu.fast_travel_tumbleweed'),
+            txt = Lang:t('menu.ticket_price')..Config.TumbleweedPrice,
             icon = 'fas fa-map-marked-alt',
             params = {
                 isServer = true,
@@ -132,8 +132,8 @@ RegisterNetEvent('rsg-fasttravel:client:menu', function()
             }
         },
         {
-            header = 'FastTravel to Valentine',
-            txt = 'Ticket Price $ '..Config.ValentinePrice,
+            header = Lang:t('menu.fast_travel_valentine'),
+            txt = Lang:t('menu.ticket_price')..Config.ValentinePrice,
             icon = 'fas fa-map-marked-alt',
             params = {
                 isServer = true,
@@ -145,8 +145,8 @@ RegisterNetEvent('rsg-fasttravel:client:menu', function()
             }
         },
         {
-            header = 'FastTravel to Van Horn',
-            txt = 'Ticket Price $ '..Config.VanHornPrice,
+            header = Lang:t('menu.fast_travel_vanhorn'),
+            txt = Lang:t('menu.ticket_price')..Config.VanHornPrice,
             icon = 'fas fa-map-marked-alt',
             params = {
                 isServer = true,
@@ -158,8 +158,8 @@ RegisterNetEvent('rsg-fasttravel:client:menu', function()
             }
         },
         {
-            header = 'FastTravel to Sisika',
-            txt = 'Ticket Price $ '..Config.SisikaPrisonPrice,
+            header = Lang:t('menu.fast_travel_sisika'),
+            txt = Lang:t('menu.ticket_price')..Config.SisikaPrisonPrice,
             icon = 'fas fa-map-marked-alt',
             params = {
                 isServer = true,
@@ -171,7 +171,7 @@ RegisterNetEvent('rsg-fasttravel:client:menu', function()
             }
         },
         {
-            header = "❌ | Close Menu",
+            header = Lang:t('menu.close_menu'),
             txt = '',
             params = {
                 event = 'rsg-menu:closeMenu',
@@ -187,7 +187,7 @@ AddEventHandler('rsg-fasttravel:client:doTravel', function(travel)
     PlaySoundFrontend("Gain_Point", "HUD_MP_PITP", true, 1)    
     local travelto = travel
     local ped = PlayerPedId()
-    Citizen.InvokeNative(0x1E5B70E53DB661E5, 0, 0, 0, 'FastTravel', '', '')
+    Citizen.InvokeNative(0x1E5B70E53DB661E5, 0, 0, 0, Lang:t('menu.fast_travel'), '', '')
     Wait(Config.TravelTime)
     Citizen.InvokeNative(0x203BEFFDBE12E96A, PlayerPedId(), travelto)
     Citizen.InvokeNative(0x74E2261D2A66849A, 0)
