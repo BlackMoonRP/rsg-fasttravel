@@ -5,6 +5,7 @@
 
 # Dependancies
 - rsg-core
+- ox_lib
 
 # Installation
 - ensure that the dependancies are added and started
