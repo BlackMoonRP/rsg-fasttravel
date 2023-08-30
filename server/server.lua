@@ -5,11 +5,12 @@ AddEventHandler('rsg-fasttravel:server:buyTicket', function(data)
     local src = source
     local Player = RSGCore.Functions.GetPlayer(src)
     local destination = data.destination
-    local price = data.price
+    local cost = data.cost
+    local traveltime = data.traveltime
     local cashBalance = Player.PlayerData.money["cash"]
-    if cashBalance >= price then
-        Player.Functions.RemoveMoney("cash", price, "purchase-fasttravel")
-        TriggerClientEvent('rsg-fasttravel:client:doTravel', src, destination)
+    if cashBalance >= cost then
+        Player.Functions.RemoveMoney("cash", cost, "purchase-fasttravel")
+        TriggerClientEvent('rsg-fasttravel:client:doTravel', src, destination, traveltime)
     else 
         RSGCore.Functions.Notify(src, Lang:t('error.no_cash'), 'error')
     end
